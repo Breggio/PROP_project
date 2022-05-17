@@ -12,13 +12,14 @@ O_F = 6; % O/F ratio - from previous computations
 
 m_dot = 0.0312; % [kg/s] Propellants mass flow ratio
 
-Pc_in = 20; % [bar] Initial combustion chamber pressure
+Pc_in = 20*1e5; % [Pa] Initial combustion chamber pressure
 
 rho_f = 810; % [kg/m^3] fuel density
 rho_ox = 1373; % [kg/m^3] oxidizer density
 
-deltaP_valve = 0; % Pressure loss due to open-close valve and check valve
-deltaP_feed = 0.5; % [atm] Pressure loss of the feeding line
+
+deltaP_valve = deltaP_check + deltaP_openclose; % Pressure loss due to open-close valve and check valve
+deltaP_feed = 0.5*101325; % [Pa] Pressure loss of the feeding line
 u = 10; % [m/s] Velocity of the propellant in the feeding lines
 deltaP_dyn_f = 0.5*rho_f*u^2; % [Pa] Dynamic pressure loss in the feeding lines - fuel
 deltaP_dyn_ox = 0.5*rho_ox*u^2; % [Pa] Dynamic pressure loss in the feeding lines - oxidizer
