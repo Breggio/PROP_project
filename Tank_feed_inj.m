@@ -14,8 +14,8 @@ m_dot = 0.0312; % [kg/s] Propellants mass flow ratio
 
 Pc_in = 20; % [bar] Initial combustion chamber pressure
 
-rho_f = 0; % [kg/m^3] fuel density
-rho_ox = 0; % [kg/m^3] oxidizer density
+rho_f = 810; % [kg/m^3] fuel density
+rho_ox = 1373; % [kg/m^3] oxidizer density
 
 deltaP_valve = 0; % Pressure loss due to open-close valve and check valve
 deltaP_feed = 0.5; % [atm] Pressure loss of the feeding line
